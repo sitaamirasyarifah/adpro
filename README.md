@@ -5,7 +5,15 @@ Check again your source code and evaluate the coding standards that you have lea
 Write clean code principles and secure coding practices that have been applied to your code. 
 If you find any mistake in your source code, please explain how to improve your code.
 
-Pada tutorial pertama ini, saya telah mengaplikasikan prinsip-prinsip "Clean Code" yang telah diajarkan di kelas. 
-Pertama adalah melakukan penamaan variabel yang jelas sehingga saya maupun orang lain yang melihat code saya tidak bingung. 
-Kemudian, fungsi yang saya tuliskan jelas, ringkas, dan efisien sehingga tidak perlu diberikan comment.
+In this initial tutorial, I've diligently put into practice the foundational tenets of "Clean Code" that have been instilled within the course curriculum. 
+To begin with, meticulous attention has been given to naming variables with utmost clarity, ensuring that both myself and any other stakeholders perusing the code are met with no ambiguity or confusion. 
+Furthermore, the functions meticulously crafted are not only distinctly delineated but also succinctly structured and highly efficient, thereby obviating the necessity for supplementary explanatory comments.
 
+
+Reflection 2
+After writing the unit test, how do you feel? How many unit tests should be made in a class? How to make sure that our unit tests are enough to verify our program? It would be good if you learned about code coverage. Code coverage is a metric that can help you understand how much of your source is tested. If you have 100% code coverage, does that mean your code has no bugs or errors? 
+Suppose that after writing the CreateProductFunctionalTest.java along with the corresponding test case, you were asked to create another functional test suite that verifies the number of items in the product list. You decided to create a new Java class similar to the prior functional test suites with the same setup procedures and instance variables. 
+
+After writing unit tests, I feel confident about the code's quality. The number of unit tests in a class depends on its complexity, but each important or complex function should have at least one test. To ensure our unit tests are sufficient, we can check code coverage, a metric indicating how much of our code is tested. However, achieving 100% code coverage doesn't guarantee bug-free code.
+
+Creating another functional test suite for verifying the number of items in the product list is reasonable. However, duplicating setup procedures and instance variables in a new class may lead to code redundancy and reduced maintainability. It's crucial to maintain code cleanliness to avoid such issues. Refactoring the setup procedures into a common base class and utilizing inheritance can help reduce code duplication and enhance code quality. Additionally, employing reusable helper methods and organizing tests into logical groups can further improve code cleanliness and readability.
