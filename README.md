@@ -2,6 +2,31 @@
   2206023023
   Adpro-C
 
+Modul 3
+Apply the SOLID principles you have learned. You are allowed to modify the source code according to the principles you want to implement. Please answer the following questions: 
+1) Explain what principles you apply to your project!
+
+Single Responsibility Principle (SRP): Yes, I apply SRP in my code by separating the responsibility to generate IDs and create products into two different methods. Also, I split the responsibility in the update car method where searching for a car with a specific ID and editing car attributes are placed in two separate methods, ensuring each focuses on one task only.
+
+Open-Closed Principle: Yes, I've applied OCP in my code. I ensure that IDs for both products and cars (in the create method) can be extended in other ways without modifying existing code.
+
+Liskov Substitution Principle: Yes, I've implemented LSP by ensuring that CarController doesn't extend ProductController and stands as its own class. This ensures that each controller focuses on its own responsibilities without mixing irrelevant logic.
+
+Interface Segregation: Yes, I believe I've implemented ISP in my program. All interfaces in my program only have methods related to their focus, such as the ProductService interface having methods related to product services like edit, create, delete.
+
+Dependency Inversion: Yes, I've refactored the program to implement DIP. I've created ProductRepositoryInterface and CarRepositoryInterface to abstract the necessary operations for products and cars, allowing me to separate high-level classes from repository implementation details, which adhere to DIP.
+
+2) Explain the advantages of applying SOLID principles to your project with examples.
+By applying SOLID principles, my program becomes more flexible and easier for other developers to modify. When rule changes occur, a SOLID-based design can adapt without affecting other parts of the system. For instance, by restructuring to use interfaces for repositories, other developers can add new repository implementations without worrying about impacting the existing system.
+
+
+3) Explain the disadvantages of not applying SOLID principles to your project with examples.
+Without applying SOLID principles, it would be challenging to develop the program to a higher complexity level because a system not following SOLID tends to be less flexible in accommodating changes. Additionally, lack of responsibility separation and unclear coding can lead to unexpected behavior and difficult-to-identify errors. For example, if another developer wants to use an option other than UUID for product IDs, but previously IDs were always set using UUID during product creation, it might hinder them from extending it.
+
+
+
+
+
 Modul 2
 
 1. During the exercise, I encountered several code quality issues that needed addressing. These included syntax errors that impeded the compilation process, unused or undefined variables causing unnecessary overhead, and instances of code duplication that warranted elimination to enhance clarity and mitigate the risk of desynchronized changes.
