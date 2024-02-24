@@ -2,6 +2,12 @@
   2206023023
   Adpro-C
 
+Modul 2
+
+1. During the exercise, I encountered several code quality issues that needed addressing. These included syntax errors that impeded the compilation process, unused or undefined variables causing unnecessary overhead, and instances of code duplication that warranted elimination to enhance clarity and mitigate the risk of desynchronized changes.
+
+2. Upon reviewing the CI/CD workflows on GitHub/GitLab, I believe the current implementation has effectively met the definitions of Continuous Integration and Continuous Deployment. The CI process automatically executes upon each new code change, encompassing testing and code quality analysis. Subsequently, the CD process automatically deploys to the designated platform. Consequently, this facilitates a rapid and automated development cycle, enabling consistent and efficient testing and deployment practices.
+
 
 Modul 1:
 Reflection 1:
