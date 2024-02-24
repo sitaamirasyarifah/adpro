@@ -8,18 +8,17 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.UUID;
+
 @Service
 public class ProductServiceImpl implements ProductService {
-
     @Autowired
-    private ProductRepository productRepository;
-    private String tempId = "";
-    private static int lastProductId = 0;
+    private ProductRepository productRepository = new ProductRepository();
 
     @Override
     public Product create(Product product) {
-        lastProductId++;
-        product.setProductId(Integer.toString(lastProductId));
+        String id = UUID.randomUUID().toString();
+        product.setProductId(id);
         productRepository.create(product);
         return product;
     }
@@ -34,16 +33,23 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public void delete(String productId) {
-        productRepository.delete(productId);
+        Product product = findProductById(productId);
+        productRepository.delete(product);
     }
 
     @Override
-    public void setId(String productId) {
-        tempId = productId;
+    public Product findProductById(String Id) {
+        List<Product> productData = productRepository.getProductData();
+        for (Product product : productData) {
+            if (product.getProductId().equals(Id)) {
+                return product;
+            }
+        }
+        return null;
     }
 
     @Override
-    public void edit(Product updatedProduct) {
-        productRepository.edit(tempId, updatedProduct);
+    public void edit(Product product) {
+        productRepository.edit(product);
     }
 }
