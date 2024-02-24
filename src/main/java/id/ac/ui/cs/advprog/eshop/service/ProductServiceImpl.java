@@ -17,10 +17,17 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Product create(Product product) {
-        String id = UUID.randomUUID().toString();
-        product.setProductId(id);
+        if (product.getProductId() == null) {
+            String id = generateProductId();
+            product.setProductId(id);
+        }
         productRepository.create(product);
         return product;
+    }
+
+    private String generateProductId() {
+        UUID uuid = UUID.randomUUID();
+        return uuid.toString();
     }
 
     @Override
