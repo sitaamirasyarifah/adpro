@@ -2,6 +2,16 @@
   2206023023
   Adpro-C
 
+
+Modul 4
+1. Reflect based on Percival (2017) proposed self-reflective questions (in “Principles and Best Practice of Testing” submodule, chapter “Evaluating Your Testing Objectives”), whether this TDD flow is useful enough for you or not. If not, explain things that you need to do next time you make more tests.
+I find the TDD methodology highly advantageous. Its fundamental principle involves crafting tests prior to developing code to fulfill those tests, aimed at enhancing software quality and ensuring anticipated software behavior. Although TDD may initially appear to impede progress by dedicating additional time to test creation, the long-term benefits should manifest in reduced debugging and maintenance efforts.
+
+
+2. You have created unit tests in Tutorial. Now reflect whether your tests have successfully followed F.I.R.S.T. principle or not. If not, explain things that you need to do the next time you create more tests.
+Indeed, my tests are swift, guaranteeing they do not hinder development progress. They operate independently, with each test capable of execution without influencing others. Furthermore, they are reproducible across diverse environments, self-confirming with distinct pass or fail results, and timely, constructed in tandem with the corresponding code they assess.
+
+
 Modul 3
 Apply the SOLID principles you have learned. You are allowed to modify the source code according to the principles you want to implement. Please answer the following questions: 
 1) Explain what principles you apply to your project!
